@@ -2,6 +2,7 @@ package per.khalilov.services;
 
 import per.khalilov.dto.request.BoardRequest;
 import per.khalilov.dto.request.BoardUpdateRequest;
+import per.khalilov.dto.request.UpdateBoardOwnerRequest;
 import per.khalilov.dto.response.BoardResponse;
 
 import java.util.List;
@@ -32,6 +33,5 @@ public interface BoardService {
     void archiveBoardById(UUID id);
     void unarchiveBoardById(UUID id);
     BoardResponse updateBoardById(BoardUpdateRequest newBoard);
-
-
+    BoardResponse setNewOwner(UpdateBoardOwnerRequest request);
 }
